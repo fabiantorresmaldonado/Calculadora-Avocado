@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio de Aguacate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Calculadora de Precio de Aguacate</h1>
+    
+    <label for="precioDolar">Precio del Dólar (MXN):</label>
+    <input type="number" id="precioDolar" required><br>
+    
+    <label for="cantidadKilos">Cantidad de Kilos:</label>
+    <input type="number" id="cantidadKilos" required><br>
+    
+    <label for="precioPorKilo">Precio por Kilo (MXN):</label>
+    <input type="number" id="precioPorKilo" required><br>
+    
+    <label>Porcentaje de Calibres Comprados:</label><br>
+    <input type="number" id="size32" placeholder="Size 32 (%)"><br>
+    <input type="number" id="size36" placeholder="Size 36 (%)"><br>
+    <input type="number" id="size40" placeholder="Size 40 (%)"><br>
+    <input type="number" id="size48" placeholder="Size 48 (%)"><br>
+    <input type="number" id="size60" placeholder="Size 60 (%)"><br>
+    <input type="number" id="size70" placeholder="Size 70 (%)"><br>
+    <input type="number" id="size84" placeholder="Size 84 (%)"><br>
+    
+    <label for="porcentajeGastos">Porcentaje de Gastos de Producción (%):</label>
+    <input type="number" id="porcentajeGastos" required><br>
+    
+    <label for="transporte">Gastos de Transporte (MXN):</label>
+    <input type="number" id="transporte" required><br>
+    
+    <button onclick="calcular()">Calcular</button>
+    
+    <table id="resultado" style="display: none;">
+        <thead>
+            <tr>
+                <th>Tamaño</th>
+                <th>Cajas</th>
+                <th>Precio por Caja (MXN)</th>
+                <th>Total Precio (MXN)</th>
+                <th>Precio por Caja + Gastos (MXN)</th>
+                <th>Precio por Caja + Gastos + Transporte (MXN)</th>
+                <th>Total por Caja + Gastos + Transporte (MXN)</th>
+                <th>Precio por Caja (USD)</th>
+                <th>Total Precio (USD)</th>
+                <th>Precio Caja USD + Gastos + Transporte</th>
+                <th>Total Caja USD + Gastos + Transporte</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+            <tr>
+                <th>Total</th>
+                <td id="totalCajas">0</td>
+                <td>-</td>
+                <td id="totalPrecioMXN">0</td>
+                <td>-</td>
+                <td>-</td>
+                <td id="totalCajaGastosTransporteMXN">0</td>
+                <td>-</td>
+                <td id="totalPrecioUSD">0</td>
+                <td>-</td>
+                <td id="totalCajaGastosTransporteUSD">0</td>
+            </tr>
+        </tfoot>
+    </table>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
